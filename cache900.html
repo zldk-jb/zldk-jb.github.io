@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html manifest="900.manifest">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1530">
+<title>PS4 Jailbreak FW 7.00-13.52</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="cache-page">
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){window.msgs.innerHTML="Cache Installed Successfully ✔";setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},1500);}
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+window.applicationCache.onerror=function(e){window.msgs.innerHTML="Error Installing Cache! - Clear and Re-Open Your Browser ...";};
+</script>
+<main class="cache-wrap">
+  <div class="status-card">
+    <div class="status-head">
+      <div class="ready-state"><span class="ready-dot"></span><span>Ready</span></div>
+      <div class="meta">OFFLINE CACHE</div>
+    </div>
+    <h1 id="msgs" class="cache-msg">Starting Cache Installation...</h1>
+    <p class="cache-hint">Keep this page open until installation is complete.</p>
+  </div>
+  <footer class="g2all-footer">ZoLDiK
+  </footer>
+</main>
+</body>
+</html>
