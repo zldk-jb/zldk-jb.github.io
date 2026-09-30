@@ -55,15 +55,15 @@ body{color:#f3f7ff;font-family:"Josefin Sans",Arial,sans-serif;-webkit-font-smoo
 .cache-hint{font-size:17px;color:#9fb4cc;line-height:1.5;margin:18px 0 0}
 .g2all-footer{margin-top:25px;font-size:17px;color:#b9cbe0;letter-spacing:2px}
 .gold{color:#ffd65a;text-shadow:0 0 8px rgba(255,204,51,.45);font:inherit}
-#result-image-overlay{display:none;position:fixed;z-index:10000;top:0;left:0;width:100%;height:100%;align-items:center;justify-content:center;flex-direction:column;padding:28px;background:radial-gradient(ellipse at 20% 20%,rgba(0,122,255,.2),transparent 60%),rgba(6,15,28,.98)}
-#result-image-overlay img{display:block;width:auto;height:auto;max-width:90vw;max-height:78vh;object-fit:contain;border-radius:18px;border:2px solid #30d158;box-shadow:0 0 0 6px rgba(48,209,88,.09),0 25px 65px rgba(0,0,0,.4)}
+#result-image-overlay{display:none;position:fixed;z-index:10000;top:0;left:0;width:100%;height:100%;align-items:center;justify-content:center;flex-direction:column;padding:8px;background:radial-gradient(ellipse at 20% 20%,rgba(0,122,255,.2),transparent 60%),rgba(6,15,28,.98)}
+#result-image-overlay img{display:block;width:calc(100vh - 16px);height:auto;max-width:calc(100vw - 16px);max-height:calc(100vh - 16px);object-fit:contain;border-radius:18px;border:2px solid #30d158;box-shadow:0 0 0 3px rgba(48,209,88,.09),0 12px 35px rgba(0,0,0,.4);flex-shrink:0}
 #result-image-overlay.result-failure img{border-color:#ff453a;box-shadow:0 0 0 10px rgba(255,69,58,.1),0 25px 65px rgba(0,0,0,.4)}
-.result-caption{font-size:23px;color:#74eba0;margin:25px 0 18px;text-align:center;line-height:1.4}
-.result-failure .result-caption{color:#ff8e87}
+.result-caption{display:none}
+.result-failure .result-caption{display:none}
 
 
-@media(max-height:760px){.logo-start-btn{width:325px;margin-bottom:24px}.cache-logo{width:180px;margin-bottom:24px}.g2all-center,.cache-wrap{padding:30px 0}.status-card{padding:31px 36px}.g2all-msg,.cache-msg{font-size:27px}#result-image-overlay img{max-height:76vh;max-width:90vw}}
-@media(max-width:600px){.status-card{padding:27px 22px;border-radius:24px}.status-head{flex-direction:column;align-items:flex-start;gap:16px}.g2all-msg,.cache-msg{font-size:21px}.meta{font-size:14px}.logo-start-btn{width:275px}.result-caption{font-size:20px}}
+@media(max-height:760px){.logo-start-btn{width:325px;margin-bottom:24px}.cache-logo{width:180px;margin-bottom:24px}.g2all-center,.cache-wrap{padding:30px 0}.status-card{padding:31px 36px}.g2all-msg,.cache-msg{font-size:27px}}
+@media(max-width:600px){.status-card{padding:27px 22px;border-radius:24px}.status-head{flex-direction:column;align-items:flex-start;gap:16px}.g2all-msg,.cache-msg{font-size:21px}.meta{font-size:14px}.logo-start-btn{width:275px}.result-caption{display:none}}
 @media(prefers-reduced-motion:reduce){.logo-start-btn,.logo-start-btn img{transition:none}}
 
 /* Subtle console symbols shared by every host screen. */
