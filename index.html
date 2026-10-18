@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#060e25">
+<meta name="theme-color" content="#080e2c">
 <title>ZoLDiK — PS4 Host</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -119,21 +119,11 @@ if (!isPS4) {
 }
 }
 </script>
-<div class="zen-shell">
-  <main class="zen-main">
-    <div class="zen-art" aria-hidden="true"><span class="zen-art-line line-one"></span><span class="zen-art-line line-two"></span></div>
-    <section class="zen-center">
-      <div class="zen-plate">
-        <button id="startJailbreakBtn" type="button" onclick="startJailbreak()" aria-label="Start Jailbreak" disabled>
-          <img src="playstation-logo.png" alt="PlayStation">
-        </button>
-      </div>
-      <div class="zen-info"><span class="zen-firmware-label">Firmware detected</span><strong id="detectedFirmware">...</strong></div>
-      <div class="zen-status"><i aria-hidden="true"></i><p id="msgs" role="status" aria-live="polite">Ready — Click the PlayStation logo</p></div>
-    </section>
-  </main>
-  <footer class="zen-footer"><div class="zen-symbols" aria-hidden="true"><span>△</span><span>○</span><span>×</span><span>□</span></div><span class="zen-footer-name">ZoLDiK</span></footer>
-</div>
+<main class="dashboard">
+<section class="launch-zone" aria-label="Jailbreak launcher"><div class="orbit orbit-outer"></div><div class="orbit orbit-middle"></div><button id="startJailbreakBtn" class="logo-start-btn" type="button" onclick="startJailbreak()" aria-label="Start Jailbreak" disabled><img src="playstation-logo.png" alt="PlayStation" width="470" height="312"></button></section>
+<div class="firmware-pill firmware-pill-bottom">Firmware <strong id="detectedFirmware">Detecting...</strong></div>
+<section class="status-card"><div class="status-content"><p id="msgs" class="g2all-msg" role="status" aria-live="polite">Ready — Click the PlayStation logo</p></div></section>
+</main><footer class="bottom-bar"><div class="symbols" aria-hidden="true"><span class="sym tri">△</span><span class="sym cir">○</span><span class="sym cro">×</span><span class="sym squ">□</span></div></footer>
 <script src="result-ui.js"></script><script>
 (function(){var msg=document.getElementById('msgs'),label=document.getElementById('stateLabel');function sync(){var text=msg.textContent||'',kind='ready';if(/Only for PS4/i.test(text))kind='preview';else if(/unsupported|error|failed|failure|not found/i.test(text))kind='error';else if(/success|loaded/i.test(text))kind='success';else if(/loading|wait/i.test(text))kind='loading';document.body.setAttribute('data-state',kind);}new MutationObserver(sync).observe(msg,{childList:true,subtree:true,characterData:true});sync();}());
 </script>
